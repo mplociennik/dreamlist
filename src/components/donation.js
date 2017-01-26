@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default React.createClass({
+export class Donation extends React.Component{
   render() {
     return <div>Donation</div>
   }
-})
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom'
-import Main from './views/layouts/Main';
-import Home from './views/Home';
-import Donation from './views/Donation';
-import About from './views/About';
+import {Main} from './components/main.layout';
+import {Home} from './components/home';
+import {Donation} from './components/donation';
+import {About} from './components/about';
 import { Router, Route, browserHistory } from 'react-router'
 
 render((
