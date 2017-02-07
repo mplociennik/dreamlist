@@ -1,28 +1,36 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
+import {LinkContainer} from 'react-router-bootstrap'
+import {Navbar, Nav, NavItem} from 'react-bootstrap'
 
 export class Main extends Component {
     render(){
         return(
-            <div>
-                <nav className="navbar navbar-default">
-                    <div className="container-fluid">
-                        <div className="navbar-header">
-                            <a className="navbar-brand" href="/">DreamList</a>
-                        </div>
-                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul className="nav navbar-nav">
-                                <li><Link to="/donation" activeClassName="active">Donation</Link></li>
-                                <li><Link to="/about" activeClassName="active">About</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <div className="container">
-                    {this.props.children}
-                </div>
+            <div id="main-wrapper">
+                <Navbar inverse collapseOnSelect>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="/">Dreamlist</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                </Navbar.Header>
+                <Navbar.Collapse>
+                    <Nav>
+                        <LinkContainer to="/donation">
+                            <NavItem eventKey={1}>Donation</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to="/about">
+                            <NavItem eventKey={2}>About</NavItem>
+                        </LinkContainer>
+                    </Nav>
+                    <Nav pullRight>
+                        <LinkContainer to="/login">
+                            <NavItem eventKey={3}>Login</NavItem>
+                        </LinkContainer>
+                    </Nav>
+                </Navbar.Collapse>
+                </Navbar>
+                {this.props.children}
             </div>
         );
     }
 }
-

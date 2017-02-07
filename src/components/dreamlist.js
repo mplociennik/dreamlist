@@ -1,34 +1,26 @@
 import React from 'react'
 
-class DreamListLi extends React.Component{
+class DreamListItem extends React.Component{
     render(){
         return (
-            <li>ID: {this.props.id}, name: {this.props.name}</li>
+            <div className="dream-list-item">
+                <h3>#{this.props.id} {this.props.name}</h3>
+                <img className="img-responsive" src={this.props.img} alt={this.props.name}/>
+            </div>
             )
     }
 }
 
 export class DreamList extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            numbers: []
-        }
-    }
-
-    handleClick(){
-        console.log(this)
-    }
-
 
     render(){
         var listItems = [];
         this.props.dreams.forEach(function(item, key){
-                listItems.push(<DreamListLi key={key} id={item.id} name={item.name}/>);
-            }
+            listItems.push(<DreamListItem key={key} id={item.id} name={item.name} img={item.img}/>);
+        }
         );
         return(
-            <ul>{listItems}</ul>
+            <div>{listItems}</div>
             )
     }
 }

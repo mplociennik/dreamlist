@@ -1,6 +1,6 @@
 import React from 'react'
+import {Grid, Row, Col} from 'react-bootstrap'
 import {DreamList} from './dreamlist'
-
 
 
 export class Home extends React.Component{
@@ -10,54 +10,32 @@ export class Home extends React.Component{
             dreams: []
         };
     }
-    // getDreams(){
-    //         request.get({
-    //             url: 'http://localhost:3000/test.json'
-    //         }, function (error, response, body) {
-    //             var data = JSON.parse(body);
-    //             self.setState({'dreams': data});
-    //         });
-    // }
-
-    // getDreams() {
-    //     return fetch('http://localhost:3000/test.json')
-    //       .then((response) => response.json())
-    //       .then((responseJson) => {
-    //         console.log(responseJson)
-    //         this.setState({
-    //             dreams: responseJson
-    //         });
-    //         return responseJson.dreams;
-    //       })
-    //       .catch((error) => {
-    //         console.error(error);
-    //       });
-    //   }
-    //   componentDidMount() {
-    //     this.getDreams();
-    //   }
 
     getDreams() {
         fetch("http://localhost:3000/test.json")
-          .then(response => response.json())
-          .then(json => {
+        .then(response => response.json())
+        .then(json => {
             console.log(json);
             this.setState({
               dreams: json
-            });
+          });
         });
-      }
+    }
 
-      componentDidMount() {
+    componentDidMount() {
         this.getDreams();
-      }
+    }
 
     render() {
         return (
-        <div>
-            <h1>Home</h1>
-            <DreamList dreams={this.state.dreams}/>
-        </div>
-        )
-      }
+            <Grid>
+                <Row>
+                    <Col md={4}>
+                        <h1>Home</h1>
+                        <DreamList dreams={this.state.dreams}/>
+                    </Col>
+                </Row>
+            </Grid>
+            )
+    }
 }

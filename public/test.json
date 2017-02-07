@@ -1,14 +1,17 @@
 [
   {
     "id": 1,
-    "name": "test1"
+    "name": "test1",
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
   },
   {
     "id": 2,
-    "name": "test2"
+    "name": "test2",
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
   },
   {
     "id": 3,
-    "name": "test3"
+    "name": "test3",
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
   }
 ]
