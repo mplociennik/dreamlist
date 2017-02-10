@@ -35,12 +35,9 @@ export class DreamList extends React.Component{
     }
 
     render(){
-
-        var listItems = [];
-        this.state.dreams.forEach(function(item, key){
-            listItems.push(<DreamListItem key={key} id={item.id} name={item.name} img={item.img}/>);
-        }
-
+        const dreams = this.state.dreams;
+        const listItems = dreams.map((item, key) =>
+            <DreamListItem key={key} id={item.id} name={item.name} img={item.img}/>
         );
         return(
             <div>{listItems}</div>
