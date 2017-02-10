@@ -2,16 +2,31 @@
   {
     "id": 1,
     "name": "test1",
-    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
   },
   {
     "id": 2,
     "name": "test2",
-    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
   },
   {
     "id": 3,
     "name": "test3",
-    "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/ce/maldives.jpg"
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
+  },
+  {
+    "id": 4,
+    "name": "test4",
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
+  },
+  {
+    "id": 5,
+    "name": "test5",
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
+  },
+  {
+    "id": 6,
+    "name": "test6",
+    "img": "https://dummyimage.com/600x400/fff/000.jpg&text=test"
   }
 ]
